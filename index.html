@@ -1,0 +1,205 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DARCY HOLMES</title>
+	<link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+	<link rel = "preload" href = "/css/bebas_neue_pro_regular.woff2" as = "font" type="font/woff2">
+	<link rel = "preload" href = "/css/bebas_neue_pro_regular.woff" as = "font" type="font/woff">
+  </head>
+
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
+
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+
+</script>
+
+<body>
+
+<div class="top">
+</div>
+<div class="scroll">
+  <div class="container">
+	<img onclick="openModal();currentSlide(1)" class="cover" src="images/dogdog2.jpg">
+	<img onclick="openModal();currentSlide(2)" class="cover" src="images/website01.jpg">
+	<img onclick="openModal();currentSlide(3)" class="cover" src="images/website02.png">
+	<img onclick="openModal();currentSlide(4)" class="cover" src="images/website03.jpg">
+	<img onclick="openModal();currentSlide(5)" class="cover" src="images/website04.jpg">
+	<img onclick="openModal();currentSlide(6)" class="cover" src="images/website05.jpg">
+	<img onclick="openModal();currentSlide(7)" class="cover" src="images/website06.jpg">
+	<img onclick="openModal();currentSlide(8)" class="cover" src="images/website07.jpg">
+	<img onclick="openModal();currentSlide(9)" class="cover" src="images/website08.jpg">
+	<img onclick="openModal();currentSlide(10)" class="cover" src="images/website09.jpg">
+	<img onclick="openModal();currentSlide(11)" class="cover" src="images/website10.png">
+	<img onclick="openModal();currentSlide(12)" class="cover" src="images/website11.jpg">
+	<img onclick="openModal();currentSlide(13)" class="cover" src="images/website12.jpg">
+	<img onclick="openModal();currentSlide(14)" class="cover" src="images/website13.jpg">
+	<img onclick="openModal();currentSlide(15)" class="cover" src="images/website14.jpg">
+
+  </div>
+
+
+<div class="text">
+<div class="titlebox">
+DARCY&nbsp;HOLMES<br>
+me@darcyholm.es
+</div>
+
+<div class="info">Adelaide-Based Digital Artist
+</div>
+
+<div class="info"></div>
+
+<div class="infotext">2020: Freelancing & Available For Hire / Contract<br><br>
+2019: Bachelor of Creative Arts (Digital Media) (Honours)<br>
+CDW Studios & Flinders University<br><br>
+
+2015 - 2018: Bachelor of Creative Arts (Digital Media)<br>
+CDW Studios & Flinders University
+</div>
+
+<div class="info">Programs</div>
+
+<div class="iconsgrid">
+<img class="icons" src="images/icons/photoshop.png">
+<img class="icons" src="images/icons/aftereffects.png">
+<img class="icons" src="images/icons/zbrush.png">
+<img class="icons" src="images/icons/maya.png">
+<img class="icons" src="images/icons/blender.png">
+<img class="icons" src="images/icons/unreal.png">
+</div>
+
+<div class="website">
+all art &copy; Darcy Holmes | Software icons property of their respective companies | website by Darcy Holmes
+</div>
+
+<div class="clear"></div>
+
+</div>
+
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div id ="slide01" div class="mySlides">
+      <div class="numbertext">1 / 15</div>
+      <img src="images/dogdog.jpg" style="height:90vh;margin-left:25%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 15</div>
+      <img src="images/website01.jpg" style="margin-left:20%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 15</div>
+      <img src="images/website02.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">4 / 15</div>
+      <img src="images/website03.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">5 / 15</div>
+      <img src="images/website04.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">6 / 15</div>
+      <img src="images/website05.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">7 / 15</div>
+      <img src="images/website06.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">8 / 15</div>
+      <img src="images/website07.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">9 / 15</div>
+      <img src="images/website08.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">10 / 15</div>
+      <img src="images/website09.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">11 / 15</div>
+      <img src="images/website10.png" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">12 / 15</div>
+      <img src="images/website11.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">13 / 15</div>
+      <img src="images/website12.jpg" style="margin-left:25%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">14 / 15</div>
+      <img src="images/website13.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">15 / 15</div>
+      <img src="images/website14.jpg" style="width:100%">
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+</body>
+</html>
