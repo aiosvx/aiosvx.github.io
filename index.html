@@ -23,45 +23,48 @@
   
   <div class= "topg3">
     <div class="parent">
-      <div class="grid1wrapper"> <div class="gridhead"> &nbsp;3D </div>
+      <div class="grid1wrapper"> 
+        <div class="gridheadwrapper"><div class="gridh1"> &nbsp;3D</div> <div class="close1">x&nbsp;</div></div>
         <div class="grid1">
           <div class="g1div1"></div>
           <div class="g1div2"> </div>
           <div class="g1div3"> </div>
           <div class="g1div4"><img src="images/2.jpg" class="img1"> </div>
-          <div class="g1div5">5 </div>
+          <div class="g1div5"> </div>
           <div class="g1div6"><img src="images/3.jpg" class="img1"> </div>
-          <div class="g1div7">7 </div>
+          <div class="g1div7"> </div>
           <div class="g1div8"><img src="images/4.jpg" class="img1"> </div>
-          <div class="g1div9">9 </div>
+          <div class="g1div9"> </div>
         </div> 
       </div>
 
-      <div class="grid2wrapper"> <div class="gridhead"> &nbsp;XR </div>
+      <div class="grid2wrapper"> 
+        <div class="gridheadwrapper"><div class="gridh2"> &nbsp;XR</div> <div class="close2">x&nbsp;</div></div>
         <div class="grid2">
           <div class="g2div1"> </div>
           <div class="g2div2"> </div>
           <div class="g2div3"> </div>
           <div class="g2div4"><img src="images/8.png" class="img2"> </div>
-          <div class="g2div5">5 </div>
+          <div class="g2div5"> </div>
           <div class="g2div6"><img src="images/9.png" class="img2"> </div>
-          <div class="g2div7">7 </div>
+          <div class="g2div7"> </div>
           <div class="g2div8"><img src="images/10.png" class="img2"> </div>
-          <div class="g2div9">9 </div>
+          <div class="g2div9"> </div>
         </div> 
       </div>
 
-      <div class="grid3wrapper"> <div class="gridhead"> &nbsp;Lab </div>
+      <div class="grid3wrapper"> 
+        <div class="gridheadwrapper"><div class="gridh3"> &nbsp;LAB</div> <div class="close3">x&nbsp;</div></div>
         <div class="grid3">
           <div class="g3div1"> </div>
           <div class="g3div2"> </div>
           <div class="g3div3"> </div>
           <div class="g3div4"><img src="images/11.jpg" class="img3"> </div>
-          <div class="g3div5">5 </div>
+          <div class="g3div5"> </div>
           <div class="g3div6"><img src="images/12.jpg" class="img3"> </div>
-          <div class="g3div7">7 </div>
+          <div class="g3div7"> </div>
           <div class="g3div8"><img src="images/13.jpg" class="img3"> </div>
-          <div class="g3div9">9 </div>
+          <div class="g3div9"> </div>
         </div> 
       </div>
   </div>
@@ -96,6 +99,8 @@ var g1divs = document.getElementsByName("g1div5 g1div7 g1div9")
 var g2divs = document.getElementsByName("g2div5 g2div7 g2div9")
 var g3divs = document.getElementsByName("g3div5 g3div7 g3div9")
 
+//grid1 function
+
 $('.grid1wrapper').click(function() {
    $('.parent').removeClass('opengrid2 opengrid3');
    $('.parent').addClass('opengrid1');
@@ -103,9 +108,15 @@ $('.grid1wrapper').click(function() {
    $('.img1').removeClass('imgoff');
    $('.img2, .img3').removeClass('imgon');
    $('.img2, .img3').addClass('imgoff');
+   $('.grid1').addClass('noHover');
+   $('.grid2, .grid3').removeClass('noHover');
+   $('.close1').addClass('visible');
+   $('.close2', '.close3').removeClass('visible');
    $()
 
   });
+
+//grid2 function
 
 $('.grid2wrapper').click(function() {
    $('.parent').removeClass('opengrid1 opengrid3');
@@ -114,7 +125,13 @@ $('.grid2wrapper').click(function() {
    $('.img2').removeClass('imgoff');
    $('.img1, .img3').removeClass('imgon');
    $('.img1, .img3').addClass('imgoff');
+   $('.grid2').addClass('noHover');
+   $('.grid1, .grid3').removeClass('noHover');
+   $('.close2').addClass('visible');
+   $('.close1, .close3').removeClass('visible');
   });
+
+//grid3 function
 
 $('.grid3wrapper').click(function() {
    $('.parent').removeClass('opengrid1 opengrid2');
@@ -123,18 +140,36 @@ $('.grid3wrapper').click(function() {
    $('.img3').removeClass('imgoff');
    $('.img1, .img2').removeClass('imgon');
    $('.img1, .img2').addClass('imgoff');
+   $('.grid3').addClass('noHover');
+   $('.grid1, .grid2').removeClass('noHover');
+   $('.close3').addClass('visible');
+   $('.close1, .close2').removeClass('visible');
   });
+
+//click off functions
 
 $('.topg2').click(function() {
    $('.parent').removeClass('opengrid1 opengrid2 opengrid3');
    $('.img1, .img2, .img3').removeClass('imgon');
    $('.img1, .img2, .img3').removeClass('imgoff');
+   $('.grid1, .grid2, .grid3').removeClass('noHover');
+   $('.close1, .close2, .close3').removeClass('visible');
   });
 
 $('.topg1').click(function() {
    $('.parent').removeClass('opengrid1 opengrid2 opengrid3');
    $('.img1, .img2, .img3').removeClass('imgon');
    $('.img1, .img2, .img3').removeClass('imgoff');
+   $('.grid1, .grid2, .grid3').removeClass('noHover');
+   $('.close1, .close2, .close3').removeClass('visible');
+  });
+
+$('.close1').click(function() {
+   $('.parent').removeClass('opengrid1 opengrid2 opengrid3');
+   $('.img1, .img2, .img3').removeClass('imgon');
+   $('.img1, .img2, .img3').removeClass('imgoff');
+   $('.grid1, .grid2, .grid3').removeClass('noHover');
+   $('.close1, .close2, .close3').removeClass('visible');
   });
 
 </script>
