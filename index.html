@@ -24,7 +24,7 @@
   <div class= "topg3">
     <div class="parent">
       <div class="grid1wrapper"> 
-        <div class="gridheadwrapper"><div class="gridh1"> &nbsp;3D</div> <div class="close1">x&nbsp;</div></div>
+        <div class="gridheadwrapper" id="gridheadwrapid1"><div class="gridh1"> &nbsp;3D</div> <div class="close1">x&nbsp;</div></div>
         <div class="grid1">
           <div class="g1div1"></div>
           <div class="g1div2"> </div>
@@ -39,7 +39,7 @@
       </div>
 
       <div class="grid2wrapper"> 
-        <div class="gridheadwrapper"><div class="gridh2"> &nbsp;XR</div> <div class="close2">x&nbsp;</div></div>
+        <div class="gridheadwrapper" id="gridheadwrapid2"><div class="gridh2"> &nbsp;XR</div> <div class="close2">x&nbsp;</div></div>
         <div class="grid2">
           <div class="g2div1"> </div>
           <div class="g2div2"> </div>
@@ -54,7 +54,7 @@
       </div>
 
       <div class="grid3wrapper"> 
-        <div class="gridheadwrapper"><div class="gridh3"> &nbsp;LAB</div> <div class="close3">x&nbsp;</div></div>
+        <div class="gridheadwrapper" id="gridheadwrapid3"><div class="gridh3"> &nbsp;LAB</div> <div class="close3">x&nbsp;</div></div>
         <div class="grid3">
           <div class="g3div1"> </div>
           <div class="g3div2"> </div>
@@ -72,105 +72,106 @@
 
 
 <script>
-//var grid1clicked = document.querySelector('grid1wrapper');
-//var grid2clicked = document.querySelector('grid2wrapper');
-//var grid3clicked = document.querySelector('grid3wrapper');
 
-//grid1clicked.onclick = grid1Func;
-//grid2clicked.onclick = grid2Func;
-//grid3clicked.onclick = grid3Func;
+//grid1 
+//onclick function
 
-// function grid1Func(e) {
-//   $('.parent').addClass('opengrid1');
-//   $('.parent').removeClass('opengrid2 opengrid3');
-// }
-
-// function grid2Func(e) {
-//   $('.parent').addClass('opengrid2');
-//   $('.parent').removeClass('opengrid1 opengrid3');
-// }
-
-// function grid3Func(e) {
-//   $('.parent').addClass('opengrid3');
-//   $('.parent').removeClass('opengrid2 opengrid1')
-// }
-
-var g1divs = document.getElementsByName("g1div5 g1div7 g1div9")
-var g2divs = document.getElementsByName("g2div5 g2div7 g2div9")
-var g3divs = document.getElementsByName("g3div5 g3div7 g3div9")
-
-//grid1 function
-
-$('.grid1wrapper').click(function() {
+$('.grid1, .gridh1').click(function() {
    $('.parent').removeClass('opengrid2 opengrid3');
    $('.parent').addClass('opengrid1');
+   $('.imgoff').removeClass('imgoff');
+   $('.imgon').removeClass('imgon');
    $('.img1').addClass('imgon');
-   $('.img1').removeClass('imgoff');
-   $('.img2, .img3').removeClass('imgon');
    $('.img2, .img3').addClass('imgoff');
+   $('.noHover').removeClass('noHover');
    $('.grid1').addClass('noHover');
-   $('.grid2, .grid3').removeClass('noHover');
+   $('.visible').removeClass('visible');
    $('.close1').addClass('visible');
-   $('.close2', '.close3').removeClass('visible');
-   $()
-
+   $('.active').removeClass('active');
+   $('#gridheadwrapid1').addClass('active');
+   $('.grid1').removeClass('hover');
   });
 
-//grid2 function
+  //hover function
 
-$('.grid2wrapper').click(function() {
+$('.grid1, #gridheadwrapid1').mouseenter(function() {
+	if ($('.grid1').hasClass('noHover')){}
+	else {$('.grid1, #gridheadwrapid1').addClass('hover');}
+  });
+
+$('.grid1, #gridheadwrapid1').mouseleave(function() {
+	$('.grid1, #gridheadwrapid1').removeClass('hover');
+  });
+
+//grid2 
+//onclick function
+
+$('.grid2, .gridh2').click(function() {
    $('.parent').removeClass('opengrid1 opengrid3');
    $('.parent').addClass('opengrid2');
+   $('.imgoff').removeClass('imgoff');
+   $('.imgon').removeClass('imgon');
    $('.img2').addClass('imgon');
-   $('.img2').removeClass('imgoff');
-   $('.img1, .img3').removeClass('imgon');
    $('.img1, .img3').addClass('imgoff');
+   $('.noHover').removeClass('noHover');
    $('.grid2').addClass('noHover');
-   $('.grid1, .grid3').removeClass('noHover');
+   $('.visible').removeClass('visible');
    $('.close2').addClass('visible');
-   $('.close1, .close3').removeClass('visible');
+   $('.active').removeClass('active');
+   $('#gridheadwrapid2').addClass('active');
   });
 
-//grid3 function
+//hover function
 
-$('.grid3wrapper').click(function() {
+$('.grid2, #gridheadwrapid2').mouseenter(function() {
+	if ($('.grid2').hasClass('noHover')){}
+	else {$('.grid2, #gridheadwrapid2').addClass('hover');}
+  });
+
+$('.grid2, #gridheadwrapid2').mouseleave(function() {
+	$('.grid2, #gridheadwrapid2').removeClass('hover');
+  });
+
+//grid3 
+//onclick function
+
+$('.grid3, .gridh3').click(function() {
    $('.parent').removeClass('opengrid1 opengrid2');
    $('.parent').addClass('opengrid3');
+   $('.imgoff').removeClass('imgoff');
+   $('.imgon').removeClass('imgon');
    $('.img3').addClass('imgon');
-   $('.img3').removeClass('imgoff');
-   $('.img1, .img2').removeClass('imgon');
    $('.img1, .img2').addClass('imgoff');
+   $('.noHover').removeClass('noHover');
    $('.grid3').addClass('noHover');
-   $('.grid1, .grid2').removeClass('noHover');
+   $('.visible').removeClass('visible');
    $('.close3').addClass('visible');
-   $('.close1, .close2').removeClass('visible');
+   $('.active').removeClass('active');
+   $('#gridheadwrapid3').addClass('active');
+  });
+
+ //hover function
+
+$('.grid3, #gridheadwrapid3').mouseenter(function() {
+	if ($('.grid3').hasClass('noHover')){}
+	else {$('.grid3, #gridheadwrapid3').addClass('hover');}
+  });
+
+$('.grid3, #gridheadwrapid3').mouseleave(function() {
+	$('.grid3, #gridheadwrapid3').removeClass('hover');
   });
 
 //click off functions
 
-$('.topg2').click(function() {
+$('.close1, .close2, .close3, .topg1, .topg2').click(function() {
    $('.parent').removeClass('opengrid1 opengrid2 opengrid3');
-   $('.img1, .img2, .img3').removeClass('imgon');
-   $('.img1, .img2, .img3').removeClass('imgoff');
-   $('.grid1, .grid2, .grid3').removeClass('noHover');
-   $('.close1, .close2, .close3').removeClass('visible');
+   $('.imgon').removeClass('imgon');
+   $('.imgoff').removeClass('imgoff');
+   $('.noHover').removeClass('noHover');
+   $('.visible').removeClass('visible');
+   $('.active').removeClass('active');
   });
 
-$('.topg1').click(function() {
-   $('.parent').removeClass('opengrid1 opengrid2 opengrid3');
-   $('.img1, .img2, .img3').removeClass('imgon');
-   $('.img1, .img2, .img3').removeClass('imgoff');
-   $('.grid1, .grid2, .grid3').removeClass('noHover');
-   $('.close1, .close2, .close3').removeClass('visible');
-  });
-
-$('.close1').click(function() {
-   $('.parent').removeClass('opengrid1 opengrid2 opengrid3');
-   $('.img1, .img2, .img3').removeClass('imgon');
-   $('.img1, .img2, .img3').removeClass('imgoff');
-   $('.grid1, .grid2, .grid3').removeClass('noHover');
-   $('.close1, .close2, .close3').removeClass('visible');
-  });
 
 </script>
 </body>
