@@ -5,29 +5,44 @@
   grid-template-areas: "a b c"
                        "d e f";
   grid-template-columns: 25% 50% 25%;
-  grid-template-rows: 2.5fr 7.5fr;
-  }
+  grid-template-rows: 4fr 6fr;
+}
   
-  .topg1 { grid-area: b; 
-  }
-  .topg2 { grid-area: d; 
+.topg0 { 
+  grid-area: a;
+  display: grid;
+  grid-template-areas: "a b c"
+                       "d e f"
+                       "g h i";
+  grid-template-columns: 30% 55% 15%;
+  grid-template-rows:2fr 3.5fr 2fr;      
+}
+
+.topg1 { grid-area: b; 
+}
+
+.topg2 { grid-area: d; 
            display: grid;
            grid-template-areas: "a b c" "d e f" "g h i" "j k l";
            grid-template-columns: 30% 55% 15%;
            grid-template-rows: 1fr 5fr 6fr 4fr;
-  }
-  .topg3 { grid-area: e; 
-  }
+           row-gap: 2vh;
+           margin-top: -5vh;
+}
+
+.topg3 { grid-area: e; 
+}
   
 /*main grid structure*/
 
 .parent {
   display: grid;
-  grid-template-columns: 33.33% 33.33% 33.33% .1%;
+  grid-template-columns: 33.34% 33.34% 33.34%;
   column-gap: 10px;
   row-gap: 10px; 
-
+  transition: .5s;
 }
+
 .grid1wrapper { grid-area: 1 / 1 / 2 / 2;  
   text-align: left;
   font-size: 3vh;
@@ -57,6 +72,7 @@
   grid-template-columns: 66.67% 16.67% 16.67%; 
   column-gap: 10px;
   row-gap: 10px; 
+  transition: .5s;
 }
 
 .opengrid2 {
@@ -64,6 +80,7 @@
   grid-template-columns: 16.67% 66.67% 16.67%; 
   column-gap: 10px;
   row-gap: 10px; 
+  transition: .5s;
 }
 
 .opengrid3 {
@@ -71,6 +88,15 @@
   grid-template-columns: 16.67% 16.67% 66.67%; 
   column-gap: 10px;
   row-gap: 10px; 
+  transition: .5s;
+}
+
+.resetgrid {
+  display: grid;
+  grid-template-columns: 33.33% 33.33% 33.33%;
+  column-gap: 10px;
+  row-gap: 10px; 
+  transition: .5s;
 }
 
 /*first column grid structure*/
@@ -93,22 +119,22 @@
   background-color: rgb(255, 255, 255);
 }
 .g1div4 { grid-area: 1 / 1 / 2 / 2; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 }
 .g1div5 { grid-area: 1 / 2 / 2 / 3; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 }
 .g1div6 { grid-area: 2 / 1 / 3 / 2; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 }
 .g1div7 { grid-area: 2 / 2 / 3 / 3; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 }
 .g1div8 { grid-area: 3 / 1 / 4 / 2; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 }
 .g1div9 { grid-area: 3 / 2 / 4 / 3; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 } 
 
 /*second column grid structure*/
@@ -132,22 +158,22 @@
   background-color: rgb(255, 255, 255);
  }
 .g2div4 { grid-area: 1 / 1 / 2 / 2; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
  }
 .g2div5 { grid-area: 1 / 2 / 2 / 3; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
  }
 .g2div6 { grid-area: 2 / 1 / 3 / 2; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
  }
 .g2div7 { grid-area: 2 / 2 / 3 / 3; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
  }
 .g2div8 { grid-area: 3 / 1 / 4 / 2; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
  }
 .g2div9 { grid-area: 3 / 2 / 4 / 3; 
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
  } 
 
 /*third column grid structure*/
@@ -171,22 +197,31 @@
   background-color: rgb(255, 255, 255);
 }
 .g3div4 { grid-area: 1 / 1 / 2 / 2;  
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 }
 .g3div5 { grid-area: 1 / 2 / 2 / 3;  
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 }
 .g3div6 { grid-area: 2 / 1 / 3 / 2;  
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 }
 .g3div7 { grid-area: 2 / 2 / 3 / 3;  
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 }
 .g3div8 { grid-area: 3 / 1 / 4 / 2;  
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
 }
 .g3div9 { grid-area: 3 / 2 / 4 / 3;  
-  background-color: rgb(255, 255, 255);
+  background-color: darkgray;
+}
+
+.hidedivs {
+  display: grid;
+  grid-template-columns: 1fr 0fr;
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 0px;
+  row-gap: 10px; 
+  opacity: 70%;
 }
 
 /*close buttons and grid head*/
@@ -232,7 +267,6 @@
   text-align: right;
   grid-area: b;
   cursor: pointer;
-
 }
 
 .close3{
@@ -243,9 +277,7 @@
   text-align: right;
   grid-area: b; 
   cursor: pointer;
-
 }
-
 
 .close1:hover{
   color:white;
@@ -253,7 +285,6 @@
   font-size: 3vh;
   align-content: right;
   text-align: right;
-
 }
 
 .close2:hover{
@@ -262,7 +293,6 @@
   font-size: 3vh;
   align-content: right;
   text-align: right;
-
 }
 
 .close3:hover{
@@ -271,9 +301,25 @@
   font-size: 3vh;
   align-content: right;
   text-align: right;
-
 }
 
+/*content*/
+
+.landingvid {
+background-color: darkgray;
+width: 101.5%;
+height: 20vh;
+}
+
+.helloheads {
+  height: 16vh;
+  width: 16vh;
+  display: block;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+}
 
 /*text controls*/
 
@@ -297,46 +343,47 @@
   font-family: 'bebas';
 }
 
-.sidetext {
+.sidetext0 {
+  text-align: left;
+  font-size: 1.8vh;
+  font-family: Arial, Helvetica, sans-serif;
+}  
+
+.topg0text {
   grid-area: e;
   text-align: left;
   font-size: 1.8vh;
   font-family: Arial, Helvetica, sans-serif;
 }
-.sidetext2 {
+
+.topg0content {
   grid-area: h;
   text-align: left;
   font-size: 1.8vh;
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.sidetext {
+  grid-area: e;
+  text-align: left;
+  font-size: 1.8vh;
+  font-family: Arial, Helvetica, sans-serif;
+  max-height: 20vh;
+}
+.sidetext2 {
+  grid-area: h;
+  text-align: justify;
+  font-size: 1.8vh;
+  font-family: Arial, Helvetica, sans-serif;
+  max-height: 20vh;
+}
+
 .sidetext3 {
   grid-area: k;
   text-align: left;
-  font-size: 2vh;
-}
-
-/*interaction and feedback controls*/
-
-/*
-.grid1:hover .gridh1 { 
-  background-color: darkgray;
-  color: white;
-} 
-
-.grid2:hover .gridh2 {
-  background-color: darkgray;
-  color: white;
-}
-
-.grid3:hover .gridh3 {
-  background-color: darkgray;
-  color: white;
-}
-
-.gridheadwrapper:hover {
-  background-color: darkgray;
-  color: white;
+  font-size: 1.8vh;
+  font-family: Arial, Helvetica, sans-serif;
+  max-height: 20vh;
 }
 
 /*image jquery classes*/
@@ -361,21 +408,21 @@
   object-fit: cover;
   }
 
- .img2 {
+.img2 {
   display: inherit;
   height: 16vh;
   width: 16vh;
   object-fit: cover;
   }
   
- .img3 {
+.img3 {
   display: inherit;
   height: 16vh;
   width: 16vh;
   object-fit: cover;
   }
 
-  .imgon {
+.imgon {
   width: 32vh;
   height: 16vh;
   margin-left: auto;
@@ -385,8 +432,11 @@
   }
 
 .imgoff {
-  display: none;
-}
+  display: inherit;
+  height: 16vh;
+  width: 16vh;
+  object-fit: cover;
+  }
 
 .noHover {
   pointer-events: none;

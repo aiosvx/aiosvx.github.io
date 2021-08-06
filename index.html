@@ -1,7 +1,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" >
-	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="viewport" content="user-scalable=no, width=device-width, initia=1, maximu=1" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel = "preload" href = "/css/bebas_neue_pro_regular.woff2" as = "font" type="font/woff2">
@@ -10,15 +10,19 @@
     </head>
 <body>
 <div class= "top">
-  <div class= "topg1">
-    <div class= "head">ACOLAB</div>
-    <div class= "subhead">Technical Art and Systems Integration Specialists</div>
+  
+  <div class="topg0"><div class="topg0text">topg0 top</div><div class="topg0content">topg0 mid<div class="topg0tagline">topg0 bottom</div></div></div>
+ 
+  <div class="topg1">
+    <div class="head">ACOLAB</div>
+    <div class="subhead">Technical Art and Systems Integration Specialists</div>
+    <div class="landingvid">&nbsp;</div>
   </div>
 
   <div class= "topg2">
-    <div class="sidetext">ACOLAB (Adelaide Coordinate Laboratories) is a co-op work space and studio, home to some of Adelaide's finest<br> up-and-coming artists and developers. </div>
-    <div class="sidetext2">Specialising in technical art and systems integration, ACOLAB's Darcy Holmes and Thomas Meakin have worked with Imagine Room, Northern Sound System, Dave Court, Capital Waste Productions, MRLN, Cackling Jackal and others.</div>
-    <div class="sidetext3">Placeholder</div>
+    <div class="sidetext"><img class="helloheads" src="images/darcy.jpg"></div>
+    <div class="sidetext2"><img class="helloheads" src="images/tom.jpg"></div>
+    <div class="sidetext3"></div>
   </div>
   
   <div class= "topg3">
@@ -60,7 +64,7 @@
           <div class="g3div2"> </div>
           <div class="g3div3"> </div>
           <div class="g3div4"><img src="images/11.jpg" class="img3"> </div>
-          <div class="g3div5"> </div>
+          <div class="g3div5"></div>
           <div class="g3div6"><img src="images/12.jpg" class="img3"> </div>
           <div class="g3div7"> </div>
           <div class="g3div8"><img src="images/13.jpg" class="img3"> </div>
@@ -76,8 +80,13 @@
 //grid1 
 //onclick function
 
+$( document ).ready(function () {
+  $('.parent').addClass('resetgrid');
+});
+
+
 $('.grid1, .gridh1').click(function() {
-   $('.parent').removeClass('opengrid2 opengrid3');
+   $('.parent').removeClass('opengrid2 opengrid3 resetgrid');
    $('.parent').addClass('opengrid1');
    $('.imgoff').removeClass('imgoff');
    $('.imgon').removeClass('imgon');
@@ -89,25 +98,26 @@ $('.grid1, .gridh1').click(function() {
    $('.close1').addClass('visible');
    $('.active').removeClass('active');
    $('#gridheadwrapid1').addClass('active');
-   $('.grid1').removeClass('hover');
+   $('.grid1').removeClass('hover hidedivs');
+   $('.grid2, .grid3').addClass('hidedivs');
   });
 
   //hover function
 
 $('.grid1, #gridheadwrapid1').mouseenter(function() {
 	if ($('.grid1').hasClass('noHover')){}
-	else {$('.grid1, #gridheadwrapid1').addClass('hover');}
+	else {$('#gridheadwrapid1').addClass('hover');}
   });
 
 $('.grid1, #gridheadwrapid1').mouseleave(function() {
-	$('.grid1, #gridheadwrapid1').removeClass('hover');
+	$('#gridheadwrapid1').removeClass('hover');
   });
 
 //grid2 
 //onclick function
 
 $('.grid2, .gridh2').click(function() {
-   $('.parent').removeClass('opengrid1 opengrid3');
+   $('.parent').removeClass('opengrid1 opengrid3 resetgrid');
    $('.parent').addClass('opengrid2');
    $('.imgoff').removeClass('imgoff');
    $('.imgon').removeClass('imgon');
@@ -119,24 +129,26 @@ $('.grid2, .gridh2').click(function() {
    $('.close2').addClass('visible');
    $('.active').removeClass('active');
    $('#gridheadwrapid2').addClass('active');
+   $('.grid2').removeClass('hover hidedivs');
+   $('.grid1, .grid3').addClass('hidedivs');
   });
 
 //hover function
 
 $('.grid2, #gridheadwrapid2').mouseenter(function() {
 	if ($('.grid2').hasClass('noHover')){}
-	else {$('.grid2, #gridheadwrapid2').addClass('hover');}
+	else {$('#gridheadwrapid2').addClass('hover');}
   });
 
 $('.grid2, #gridheadwrapid2').mouseleave(function() {
-	$('.grid2, #gridheadwrapid2').removeClass('hover');
+	$('#gridheadwrapid2').removeClass('hover');
   });
 
 //grid3 
 //onclick function
 
 $('.grid3, .gridh3').click(function() {
-   $('.parent').removeClass('opengrid1 opengrid2');
+   $('.parent').removeClass('opengrid1 opengrid2 resetgrid');
    $('.parent').addClass('opengrid3');
    $('.imgoff').removeClass('imgoff');
    $('.imgon').removeClass('imgon');
@@ -148,28 +160,32 @@ $('.grid3, .gridh3').click(function() {
    $('.close3').addClass('visible');
    $('.active').removeClass('active');
    $('#gridheadwrapid3').addClass('active');
+   $('.grid3').removeClass('hover hidedivs');
+   $('.grid1, .grid2').addClass('hidedivs');
   });
 
  //hover function
 
 $('.grid3, #gridheadwrapid3').mouseenter(function() {
 	if ($('.grid3').hasClass('noHover')){}
-	else {$('.grid3, #gridheadwrapid3').addClass('hover');}
+	else {$('#gridheadwrapid3').addClass('hover');}
   });
 
 $('.grid3, #gridheadwrapid3').mouseleave(function() {
-	$('.grid3, #gridheadwrapid3').removeClass('hover');
+	$('#gridheadwrapid3').removeClass('hover');
   });
 
 //click off functions
 
 $('.close1, .close2, .close3, .topg1, .topg2').click(function() {
    $('.parent').removeClass('opengrid1 opengrid2 opengrid3');
+   $('.parent').addClass('resetgrid');
    $('.imgon').removeClass('imgon');
    $('.imgoff').removeClass('imgoff');
    $('.noHover').removeClass('noHover');
    $('.visible').removeClass('visible');
    $('.active').removeClass('active');
+   $('.hidedivs').removeClass('hidedivs');
   });
 
 
